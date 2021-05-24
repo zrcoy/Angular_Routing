@@ -13,7 +13,7 @@ import { ServersComponent } from "./servers/servers.component";
 import { UserComponent } from "./users/user/user.component";
 import { UsersComponent } from "./users/users.component";
 
-const appRoute: Routes = [
+const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   {
     path: "users",
@@ -48,7 +48,8 @@ const appRoute: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoute)],
+  // imports: [RouterModule.forRoot(appRoute, { useHash: true })],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
